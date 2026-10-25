@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>petalOS · Setup</title>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script src="app.js?v=7" defer></script>
+</head>
+<body class="editor-hidden">
+  <div class="concept-tools"><span>Concept · actions simulated</span><button id="enable-slides" type="button" hidden>Enable slides</button><button id="editor-toggle" type="button" aria-expanded="false" aria-controls="inspector">Edit concept</button></div>
+  <main class="studio">
+    <section class="preview-stage" aria-label="Interactive setup preview">
+      <div class="phone" id="phone" data-theme="light" data-step="welcome">
+        <div class="status-bar" aria-hidden="true"><span>9:41</span><span class="status-icons">▂▄▆　▰</span></div>
+        <div class="setup-top"><button id="accessibility" type="button" aria-label="Accessibility options">Accessibility</button><span class="wordmark"><span class="petal-logo"><img src="assets/petal-logo.png" alt="" draggable="false"></span><span id="brand-name">petalOS</span></span></div>
+        <div class="progress-track" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="17"><span id="progress-fill"></span></div>
+        <div class="screen-viewport"><div id="screen" class="screen" tabindex="-1"></div></div>
+        <footer class="setup-footer">
+          <p id="form-error" class="form-error" role="alert"></p>
+          <div class="footer-actions"><button id="skip" class="text-button" type="button">Set up later</button><button id="back" class="back-button" type="button" aria-label="Previous screen">Back</button><button id="next" class="primary-button" type="button">Get started</button></div>
+          <div id="step-caption" class="step-caption"></div>
+        </footer>
+        <div class="gesture-bar" aria-hidden="true"></div>
+      </div>
+    </section>
+    <aside class="inspector" id="inspector" aria-label="Concept editor">
+      <h2>Edit concept</h2><p>Wording and appearance. Changes save in this browser.</p>
+      <details><summary>Jump to a screen</summary><nav id="screen-list" aria-label="Setup screens"></nav></details>
+      <label for="edit-title">Heading</label><textarea id="edit-title" rows="2"></textarea>
+      <label for="edit-body">Description</label><textarea id="edit-body" rows="2"></textarea>
+      <label for="edit-next">Button label</label><input id="edit-next" type="text" maxlength="45">
+      <div class="editor-pair"><label for="edit-accent">Accent<input id="edit-accent" type="color" value="#0969f6"></label><label for="edit-radius">Corners<input id="edit-radius" type="range" min="12" max="36" value="18"><output id="radius-value">18 px</output></label></div>
+      <label for="edit-mode">Appearance</label><select id="edit-mode"><option value="light">Light</option><option value="dark">Dark</option><option value="system">Automatic</option></select>
+      <label for="edit-motion">Slide duration</label><input id="edit-motion" type="range" min="0" max="600" step="20" value="420"><output id="motion-value">420 ms</output>
+      <p id="motion-status" role="status"></p>
+      <label class="motion-toggle"><input id="force-motion" type="checkbox"> Preview slides even when reduced motion is on</label>
+      <details><summary>Screen order & native notes</summary><div class="editor-buttons"><button id="move-earlier" type="button">Move earlier</button><button id="move-later" type="button">Move later</button></div><p id="native-note"></p><code id="native-target"></code></details>
+      <div class="editor-buttons"><button id="export-design" type="button">Export JSON</button><button id="import-design" type="button">Import JSON</button></div>
+      <input id="import-file" type="file" accept=".json,application/json" hidden>
+      <div class="editor-buttons"><button id="restart" type="button">Restart setup</button><button id="reset-design" type="button">Reset design</button></div>
+      <button id="preview-mode" type="button" aria-pressed="false">Hide preview tools</button><span id="save-status">Saved locally</span>
+    </aside>
+  </main>
+  <button id="exit-preview" class="exit-preview" type="button">Edit concept</button>
+  <dialog id="sheet" class="sheet"><div id="sheet-content"></div><button id="close-sheet" class="text-button" type="button">Close</button></dialog>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>

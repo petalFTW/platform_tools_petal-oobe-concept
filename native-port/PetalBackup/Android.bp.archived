@@ -1,0 +1,15 @@
+// Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0
+android_app {
+    name: "PetalBackup",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    sdk_version: "current",
+    min_sdk_version: "35",
+    certificate: ":petal_appcenter",
+    system_ext_specific: true,
+    privileged: false,
+    optimize: {
+        enabled: false,
+    },
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="app_name">Petal Backup</string>
+    <string name="restore_title">Restore your backup</string>
+    <string name="project_status">Project preview. The backup and restore engine is not implemented yet.</string>
+    <string name="planned_content">Planned: APKs, private app data with root, external app data, SMS, call logs, and wallpaper.</string>
+    <string name="local_storage">Choose local backup folder</string>
+    <string name="local_unset">No local folder selected.</string>
+    <string name="local_selected">Local folder: %1$s</string>
+    <string name="cloud_storage">Server / cloud storage</string>
+    <string name="cloud_unset">Cloud provider interfaces are prepared. Account and transfer support is pending.</string>
+    <string name="cloud_selected">Saved connection details: %1$s. The connection has not been verified yet.</string>
+    <string name="cloud_configure">Configure %1$s</string>
+    <string name="cloud_configure_info">Save your server details here. Connection checks and backup transfers are still pending.</string>
+    <string name="cloud_oauth_pending">Account sign-in for this provider is not implemented yet.</string>
+    <string name="cloud_endpoint">Server / endpoint URL</string>
+    <string name="cloud_endpoint_hint">https://backup.example.com</string>
+    <string name="cloud_username">Username</string>
+    <string name="cloud_password">Password or app password</string>
+    <string name="cloud_folder">Backup folder on server</string>
+    <string name="cloud_region">Region</string>
+    <string name="cloud_bucket">Bucket</string>
+    <string name="cloud_access_key">Access key ID</string>
+    <string name="cloud_secret_key">Secret access key</string>
+    <string name="server_host">Server hostname or IP</string>
+    <string name="server_host_hint">nas.example.com</string>
+    <string name="server_port">Port</string>
+    <string name="server_folder">Backup folder</string>
+    <string name="server_folder_optional">Folder inside share (optional)</string>
+    <string name="server_share">SMB share name</string>
+    <string name="server_domain">Domain / workgroup (optional)</string>
+    <string name="server_host_invalid">Enter a hostname or IP address without a protocol or path.</string>
+    <string name="server_port_invalid">Enter a port between 1 and 65535.</string>
+    <string name="cloud_save">Save details</string>
+    <string name="cloud_load_failed">Could not load the saved connection details.</string>
+    <string name="cloud_save_failed">Could not save the connection details.</string>
+    <string name="cloud_url_invalid">Enter an http:// or https:// server URL without embedded credentials.</string>
+    <string name="cloud_fields_required">Complete the connection fields.</string>
+    <string name="root_status">Root access: backend contract prepared; no root command is run by this shell.</string>
+    <string name="backup">Back up</string>
+    <string name="restore">Restore</string>
+    <string name="skip_restore">Continue without restoring</string>
+    <string name="folder_failed">Could not keep access to that folder. Choose another folder.</string>
+</resources>

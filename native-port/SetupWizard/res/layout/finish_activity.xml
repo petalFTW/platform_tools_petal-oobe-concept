@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/petal_setup_surface">
+    <LinearLayout android:id="@+id/linear_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingHorizontal="32dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <FrameLayout android:layout_width="80dp" android:layout_height="80dp" android:clipChildren="true" android:layout_marginBottom="40dp">
+                <ImageView android:id="@+id/brand_logo" android:layout_width="134dp" android:layout_height="134dp" android:layout_gravity="center" android:src="@drawable/petal_logo" android:contentDescription="@null" />
+            </FrameLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/petal_welcome_home" android:textColor="@color/petal_setup_text" android:textSize="42sp" android:fontFamily="sans-serif-light" android:gravity="center" android:accessibilityHeading="true" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/petal_ready" android:textColor="@color/petal_setup_secondary" android:textSize="14sp" android:gravity="center" android:layout_marginTop="16dp" />
+        </LinearLayout>
+        <org.petal.setupwizard.NavigationLayout android:id="@+id/navigation_bar" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

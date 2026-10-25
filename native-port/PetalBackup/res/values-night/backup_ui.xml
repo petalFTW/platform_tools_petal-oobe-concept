@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backup_surface">#101113</color>
+    <color name="backup_muted_surface">#1C1E22</color>
+    <color name="backup_text">#F3F4F6</color>
+    <color name="backup_secondary">#A0A6B1</color>
+    <style name="Theme.PetalBackup" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:colorAccent">#0969F6</item>
+        <item name="android:windowBackground">@color/backup_surface</item>
+        <item name="android:editTextStyle">@style/BackupField</item>
+    </style>
+</resources>

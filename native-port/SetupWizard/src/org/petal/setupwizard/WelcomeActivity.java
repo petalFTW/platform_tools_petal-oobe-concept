@@ -1,0 +1,89 @@
+/*
+ * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package org.petal.setupwizard;
+
+import static org.petal.setupwizard.SetupWizardApp.ACTION_EMERGENCY_DIAL;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Build;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.setupcompat.util.SystemBarHelper;
+
+import org.petal.setupwizard.util.SetupWizardUtils;
+
+public class WelcomeActivity extends SubBaseActivity {
+
+    private static final String ACTION_ACCESSIBILITY_SETTINGS =
+            "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+
+    @Override
+    protected void onStartSubactivity() {
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        onSetupStart();
+        SystemBarHelper.setBackButtonVisible(getWindow(), false);
+        setNextText(R.string.start);
+        Button startButton = findViewById(R.id.start);
+        Button emergButton = findViewById(R.id.emerg_dialer);
+        Button skipButton = findViewById(R.id.skip);
+        startButton.setOnClickListener(view -> onNextPressed());
+        findViewById(R.id.launch_accessibility)
+                .setOnClickListener(
+                        view -> startSubactivity(new Intent(ACTION_ACCESSIBILITY_SETTINGS)));
+
+        Button language = findViewById(R.id.welcome_language);
+        if (language != null) {
+            language.setText(java.util.Locale.getDefault().getDisplayName());
+            language.setOnClickListener(view -> onNextPressed());
+        }
+
+        if (SetupWizardUtils.hasTelephony(this)) {
+            setSkipText(R.string.emergency_call);
+            emergButton.setOnClickListener(
+                    view -> startSubactivity(new Intent(ACTION_EMERGENCY_DIAL)));
+
+        } else {
+            emergButton.setVisibility(View.GONE);
+        }
+
+        TextView welcomeTitle = findViewById(R.id.welcome_title);
+        if (SetupWizardUtils.isManagedProfile(this)) {
+            welcomeTitle.setText(getString(R.string.setup_managed_profile_welcome_message));
+            welcomeTitle.setTextSize(32);
+        } else {
+            welcomeTitle.setText(R.string.petal_hello);
+        }
+
+        if (Build.TYPE.equals("eng")) {
+            skipButton.setVisibility(View.VISIBLE);
+            skipButton.setOnClickListener(v -> {
+                SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
+            });
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+    }
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.welcome_activity;
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return -1;
+    }
+}

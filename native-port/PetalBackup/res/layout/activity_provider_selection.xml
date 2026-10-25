@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/provider_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/backup_surface">
+    <include layout="@layout/backup_brand" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="32dp" android:layout_marginTop="32dp" android:text="@string/backup_provider_title" android:textSize="32sp" android:textColor="@color/backup_text" android:fontFamily="sans-serif-medium" android:accessibilityHeading="true" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="32dp" android:layout_marginTop="16dp" android:layout_marginBottom="24dp" android:text="@string/backup_provider_description" android:textColor="@color/backup_secondary" android:textSize="14sp" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingHorizontal="32dp"><RadioGroup android:id="@+id/provider_choices" android:layout_width="match_parent" android:layout_height="wrap_content" /></ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="32dp" android:paddingTop="12dp" android:paddingBottom="24dp">
+        <Button android:id="@+id/provider_back" style="@style/BackupSecondaryButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:layout_marginEnd="6dp" android:text="@string/backup_back" />
+        <Button android:id="@+id/provider_next" style="@style/BackupPrimaryButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:layout_marginStart="6dp" android:text="@string/backup_continue" />
+    </LinearLayout>
+</LinearLayout>

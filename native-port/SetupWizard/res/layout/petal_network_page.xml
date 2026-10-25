@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.petal.setupwizard.PetalSetupLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/setup_wizard_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <TextView android:id="@+id/network_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="12dp" android:textColor="@color/petal_setup_secondary" android:textSize="13sp" />
+        <ListView android:id="@+id/network_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:divider="@color/petal_setup_line" android:dividerHeight="1dp" />
+        <Button android:id="@+id/network_more" style="@style/PetalTextButton" android:layout_width="match_parent" android:layout_height="48dp" android:text="@string/petal_network_more" />
+        <org.petal.setupwizard.NavigationLayout android:id="@+id/navigation_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:showSkipButton="true" />
+    </LinearLayout>
+</org.petal.setupwizard.PetalSetupLayout>

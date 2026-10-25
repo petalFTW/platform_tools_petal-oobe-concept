@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="end|center_vertical" android:paddingHorizontal="32dp" android:orientation="horizontal" android:importantForAccessibility="no">
+    <FrameLayout android:layout_width="28dp" android:layout_height="28dp" android:clipChildren="true"><ImageView android:layout_width="47dp" android:layout_height="47dp" android:layout_gravity="center" android:src="@drawable/petal_logo" android:contentDescription="@null" /></FrameLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp" android:text="@string/backup_brand" android:textColor="@color/backup_text" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+</LinearLayout>

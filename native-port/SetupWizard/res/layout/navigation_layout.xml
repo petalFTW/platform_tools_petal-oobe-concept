@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="12dp" android:paddingBottom="24dp">
+    <Button android:id="@+id/navbar_skip" style="@style/PetalTextButton" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="12dp" android:text="@string/petal_later" android:visibility="gone" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="50dp" android:orientation="horizontal">
+        <Button android:id="@+id/navbar_back" style="@style/PetalSecondaryButton" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:text="@string/petal_back" />
+        <Button android:id="@+id/navbar_next" style="@style/PetalPrimaryButton" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:layout_marginStart="6dp" android:text="@string/next" />
+    </LinearLayout>
+</LinearLayout>

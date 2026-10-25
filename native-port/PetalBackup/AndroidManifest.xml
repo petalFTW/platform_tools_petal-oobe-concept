@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.petal.backup"
+    android:versionCode="1"
+    android:versionName="0.1-dev">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/petal_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.PetalBackup"
+        android:supportsRtl="true">
+        <!-- Setup can open the forms; the engine still has its own readiness bit. -->
+        <meta-data android:name="org.petal.backup.RESTORE_READY" android:value="false" />
+        <meta-data android:name="org.petal.backup.SETUP_UI_READY" android:value="true" />
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CloudDestinationActivity" android:exported="false" />
+        <activity android:name=".ProviderSelectionActivity" android:exported="false" />
+        <activity android:name=".RestoreActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="org.petal.backup.action.RESTORE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

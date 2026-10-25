@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 petalOS; SPDX-License-Identifier: Apache-2.0 -->
+<com.google.android.setupcompat.view.StatusBarBackgroundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/suc_layout_status" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/petal_setup_surface">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/petal_chrome" android:layout_width="match_parent" android:layout_height="56dp" android:paddingHorizontal="32dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <Button android:id="@+id/petal_accessibility" style="@style/PetalTextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/petal_accessibility" android:textSize="11sp" />
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <include layout="@layout/petal_wordmark" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/petal_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="32dp" android:paddingEnd="32dp" android:paddingTop="32dp" android:paddingBottom="24dp">
+            <TextView android:id="@id/suc_layout_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="32sp" android:textColor="@color/petal_setup_text" android:fontFamily="sans-serif-medium" android:accessibilityHeading="true" android:hyphenationFrequency="none" />
+            <TextView android:id="@id/sud_layout_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textSize="14sp" android:textColor="@color/petal_setup_secondary" android:lineSpacingExtra="4dp" android:visibility="gone" />
+        </LinearLayout>
+        <FrameLayout android:id="@+id/petal_content" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingHorizontal="32dp" />
+        <ViewStub android:id="@id/suc_layout_footer" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.google.android.setupcompat.view.StatusBarBackgroundLayout>
